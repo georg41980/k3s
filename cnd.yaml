@@ -10,7 +10,7 @@ metadata:
 spec:
   containers:
     - name: container-network-display
-      image: ghcr.io/shwill/container-network-display:1.0.3
+      image: docker pull ghcr.io/shwill/container-network-display:1.0.3@sha256:f20adf4aa0cb8931f7a94cdd7fd98baffc0c838ecc089392c2e0028be80cdac6
       resources:  # "resources" war falsch geschrieben
         limits:
           memory: 128Mi
