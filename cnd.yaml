@@ -1,3 +1,4 @@
+---
 apiVersion: v1
 kind: Pod
 metadata:
@@ -10,10 +11,11 @@ metadata:
 spec:
   containers:
     - name: container-network-display
-      image: docker pull ghcr.io/shwill/container-network-display:1.0.3@sha256:f20adf4aa0cb8931f7a94cdd7fd98baffc0c838ecc089392c2e0028be80cdac6
-      resources:  # "resources" war falsch geschrieben
+      image: docker pull
+        ghcr.io/shwill/container-network-display:1.0.3@sha256:f20adf4aa0cb8931f7a94cdd7fd98baffc0c838ecc089392c2e0028be80cdac6
+      resources:
         limits:
           memory: 128Mi
           cpu: 500m
       ports:
-        - containerPort: 3000  # Ports müssen als Liste definiert werden
+        - containerPort: 3000
