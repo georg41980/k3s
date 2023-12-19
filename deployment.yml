@@ -9,14 +9,15 @@ spec:
   replicas: 2
   template:
     metadata:
-      labels: 
+      labels:
         app: nginx
     spec:
       containers:
-      - name: nginx
-        image: nginx:latest
-        ports:
-        - containerPort: 80
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80
+
 ---
 apiVersion: V1
 kind: Service
@@ -29,6 +30,7 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
+
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -45,4 +47,3 @@ spec:
                 name: nginx-service
                 port:
                   number: 80
-
