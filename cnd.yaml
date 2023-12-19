@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cnd
+  labels:
+    type: info
+    app: container-network-display
+  annotations:
+    my-operater: discard
+spec:
+  containers:
+  - name: container-network-display
+    image: ghcr.io/shwillcontainer-network-display:1.0.1
+    resoures:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+        containerPort: 3000
