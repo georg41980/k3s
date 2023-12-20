@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -6,7 +7,7 @@ metadata:
 spec:
   replicas: 6
   selector:
-    matchLabels:  # Ändern von "app" zu "matchLabels"
+    matchLabels:
       app: nginx
   template:
     metadata:
@@ -25,4 +26,3 @@ spec:
             httpGet:
               port: web
               path: /
-
