@@ -22,7 +22,7 @@ spec:
             - containerPort: 80
               name: web
               protocol: TCP
-          readlinessProbe:
+          readinessProbe:
             httpGet:
               port: web
               path: /
